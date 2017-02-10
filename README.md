@@ -157,7 +157,7 @@ You should make sure all your 4D exit protocol have been followed properly, befo
   //functions to read *.app/Contents/_MASReceipt/receipt are named RECEIPT*
 
 
-  //decoding the receipt is expewnsive; check 1 step at a time!
+  //decoding the receipt is expensive; check 1 step at a time!
   //you can test by putting an existing receipt (xcode, for example) inside 4D...
 
 $B_identifier:=BUNDLE Get identifier 
@@ -165,34 +165,34 @@ $R_identifier:=RECEIPT Get identifier
 
 If ($B_identifier=$R_identifier)  //user didn't chuck in a receipt from a different app
 
-$B_version:=BUNDLE Get version 
-$R_version:=RECEIPT Get version 
+  $B_version:=BUNDLE Get version 
+  $R_version:=RECEIPT Get version 
 
-If ($B_version=$R_version)  //user didn't chuck in a receipt from an old version
+  If ($B_version=$R_version)  //user didn't chuck in a receipt from an old version
 
-  //function to get MAC address of en0
-$GUID:=GUID Get identifier 
-$R_opaque:=RECEIPT Get opaque 
+      //function to get MAC address of en0
+    $GUID:=GUID Get identifier 
+    $R_opaque:=RECEIPT Get opaque 
 
-$R_hash:=RECEIPT Get hash 
-$G_hash:=GUID Compute hash ($GUID;$R_opaque;$R_identifier)
+    $R_hash:=RECEIPT Get hash 
+    $G_hash:=GUID Compute hash ($GUID;$R_opaque;$R_identifier)
 
-If ($G_hash=$R_hash)
-TRACE  //the receipt hash matches the computed hash; true customer!
+    If ($G_hash=$R_hash)
+      TRACE  //the receipt hash matches the computed hash; true customer!
 
-If (False)
-  //for more checks
-$R_creation_date:=RECEIPT Get creation date 
-$R_expiration_date:=RECEIPT Get expiration date 
-$R_original_version:=RECEIPT Get original version 
-End if 
+      If (False)
+          //for more checks
+        $R_creation_date:=RECEIPT Get creation date 
+        $R_expiration_date:=RECEIPT Get expiration date 
+        $R_original_version:=RECEIPT Get original version 
+      End if 
 
-Else 
-TRACE
-  //this is the offiial error code for bad app receipt
-  //EXIT 173 
-End if 
+    Else 
+      TRACE
+        //this is the offiial error code for bad app receipt
+        //EXIT 173 
+    End if 
 
-End if 
+  End if 
 End if 
 ```
