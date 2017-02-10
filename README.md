@@ -2,7 +2,9 @@
 
 ###Platform
 
-Set of functions to help implement receipt validation
+Set of cryptographic functions to help implement App Store Receipt Validation.
+
+For details, see [Receipt Validation Programming Guide](https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Introduction.html).
 
 | carbon | cocoa | win32 | win64 |
 |:------:|:-----:|:---------:|:---------:|
@@ -11,8 +13,6 @@ Set of functions to help implement receipt validation
 ###Version
 
 <img src="https://cloud.githubusercontent.com/assets/1725068/22371270/93e3661c-e4d9-11e6-9021-4a9754c70630.png" width="32" height="32" /> <img src="https://cloud.githubusercontent.com/assets/1725068/18940648/2192ddba-8645-11e6-864d-6d5692d55717.png" width="32" height="32" />
-
-See [Receipt Validation Programming Guide](https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Introduction.html)
 
 ##Syntax
 
