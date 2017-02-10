@@ -32,7 +32,7 @@ identifier:=RECEIPT Get identifier
 
 Parameter|Type|Description
 ------------|------|----
-identifier |TEXT|The application identifier; it should match the running application's identifier returned by ``BUNDLE Get identifer``
+identifier |TEXT|The application identifier; it should match the running application's identifier returned by ``BUNDLE Get identifier``
 
 This command reads the application identifier recorded in the App store receipt.
 
@@ -57,14 +57,24 @@ version  |TEXT|The application version; it should match the running application'
 This command reads the application version recorded in the App store receipt.
 
 ```
-identifer:=BUNDLE Get identifer
+identifier:=BUNDLE Get identifier
 ```
 
 Parameter|Type|Description
 ------------|------|----
-identifer   |TEXT|The application identifer; it should match the receipt application identifer returned by ``RECEIPT Get identifer``
+identifier   |TEXT|The application identifier; it should match the receipt application identifier returned by ``RECEIPT Get identifier``
 
 This command returns the running application's bundle identifier.
 
 Every application bundle should have its own unique identifier, in the form of reverse DNS. For example, 4D.app has the UID ``com.4d.4d``. When building a standalone application for disribution, you would want to give your final application its own ID.
+
+```
+version:=BUNDLE Get version
+```
+
+Parameter|Type|Description
+------------|------|----
+version    |TEXT|The application version; it should match the receipt application version returned by ``RECEIPT Get version``
+
+
 
