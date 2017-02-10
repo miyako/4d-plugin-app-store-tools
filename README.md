@@ -78,7 +78,7 @@ Parameter|Type|Description
 ------------|------|----
 date  |TEXT|The date when the app receipt was created
 
-This command reads the date when the app receipt was created.
+This command reads the date when the app receipt was created recorded in the App store receipt.
 
 ```
 date:=RECEIPT Get expiration date
@@ -88,7 +88,7 @@ Parameter|Type|Description
 ------------|------|----
 date  |TEXT|The date that the app receipt expires
 
-This command reads the date that the app receipt expires.
+This command reads the date that the app receipt expires recorded in the App store receipt.
 
 
 ```
