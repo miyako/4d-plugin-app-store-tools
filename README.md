@@ -86,7 +86,7 @@ date:=RECEIPT Get expiration date
 
 Parameter|Type|Description
 ------------|------|----
-date  |TEXT|The date that the app receipt expires.
+date  |TEXT|The date that the app receipt expires
 
 This command reads the date that the app receipt expires.
 
