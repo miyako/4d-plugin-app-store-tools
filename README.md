@@ -76,5 +76,42 @@ Parameter|Type|Description
 ------------|------|----
 version    |TEXT|The application version; it should match the receipt application version returned by ``RECEIPT Get version``
 
+This command returns the running application's version.
 
+Every application bundle should have a version string defined in it's ``info.plist`` file.
+
+```
+hash:=GUID Compute hash (machine; opaque; application)
+```
+
+Parameter|Type|Description
+------------|------|----
+machine|TEXT|The computer's GUID, returned by ``GUID Get identifier``
+opaque|TEXT|The receipt's opaque hash key, returned by ``RECEIPT Get opaque``
+application|TEXT|The application's UTI, returned by ``BUNDLE Get identifier``
+hash |TEXT|The computed hash value. This whould match the hash returned by ``RECEIPT Get hash``
+
+This command computes the Hash using the application's ID and version, using the GUID and hash key. 
+
+If the result matches the value in the receipt, the receipt is valid for the computer, application and version.
+
+```
+identifier:=GUID Get identifier
+```
+
+Parameter|Type|Description
+------------|------|----
+identifier |TEXT|The machine's unique identifier. It can be used for validation with ``GUID Compute hash``
+
+This command returns the current machine's unique identifier.
+
+```
+EXIT 173
+```
+
+This command calls the UNIX command ``exit``, with status code ``173``. Code ``173`` is only recognized by OS X 10.6.6 or later. For that reason, the command will perform a version check at runtime, and do nothing unless (major>=10 & minor>=6 & bugfix>=6).
+
+When the system receives an exit status ``173``, it will attempts to obtain a valid receipt for that application.
+
+You should make sure all your 4D exit protocol have been followed properly, before throwing a direct exit code to the system.
 
