@@ -61,6 +61,37 @@ version  |TEXT|The application version; it should match the running application'
 This command reads the application version recorded in the App store receipt.
 
 ```
+version:=RECEIPT Get original version
+```
+
+Parameter|Type|Description
+------------|------|----
+version  |TEXT|The version of the app that was originally purchased
+
+This command reads the original application version recorded in the App store receipt.
+
+```
+date:=RECEIPT Get creation date
+```
+
+Parameter|Type|Description
+------------|------|----
+date  |TEXT|The date when the app receipt was created
+
+This command reads the date when the app receipt was created.
+
+```
+date:=RECEIPT Get expiration date
+```
+
+Parameter|Type|Description
+------------|------|----
+date  |TEXT|The date that the app receipt expires.
+
+This command reads the date that the app receipt expires.
+
+
+```
 identifier:=BUNDLE Get identifier
 ```
 
