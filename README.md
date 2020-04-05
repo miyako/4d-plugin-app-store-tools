@@ -4,6 +4,8 @@ Set of cryptographic functions to help implement App Store Receipt Validation.
 
 In particular, the plugin provides methods to validate receipts __locally__. To validate receipts __with the App Store__, you can simply use native commands like ``HTTP Request`` and ``JSON Parse``.
 
+![obsolete-word-black-frame-word-obsolete-word-black-frame-d-rendering-123942590](https://user-images.githubusercontent.com/1725068/78463940-29122280-771e-11ea-8be8-a7830725403e.jpg)
+
 **Note**: In-app purchase receipts are not supported.
 
 For details, see [Receipt Validation Programming Guide](https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Introduction.html).
